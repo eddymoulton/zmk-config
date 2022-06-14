@@ -53,16 +53,16 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |        |           |           |           |           |           |                       |           |     (     |     )     |           |           |           |
-// |        |           |           |           |           |           |                       |           |     [     |     ]     |     _     |     =     |           |
-// |        |           |           |           |           |           |                       |           |     {     |     }     |     +     |     -     |           |
-// |        |           |           |           |           |           |           ||          |           |           |           |           |           |           |
+// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |        |           |           |           |           |           |                       |           |     (     |     )     |     _     |           |           |
+// |        |           |           |           |           |           |                       |           |     [     |     ]     |     +     |     -     |           |
+// |        |           |           |           |           |           |           ||          |           |     {     |     }     |     =     |           |           |
 //                      |           |           |           |           |           ||          |           |           |           |           |                       
             bindings = <
 &trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &none       &none       &none       &none       &none                               &none       &kp LPAR    &kp RPAR    &kp UNDER   &kp EQUAL   &none
+&trans      &none       &none       &none       &none       &none                               &none       &kp LPAR    &kp RPAR    &kp UNDER   &none       &none
 &trans      &none       &none       &none       &none       &none                               &none       &kp LBKT    &kp RBKT    &kp PLUS    &kp MINUS   &none
-&trans      &none       &none       &none       &none       &none       &none       &none       &none       &kp LBRC    &kp RBRC    &none       &none       &none
+&trans      &none       &none       &none       &none       &none       &none       &none       &none       &kp LBRC    &kp RBRC    &kp EQUAL   &none       &none
                         &trans      &trans      &none       &none       &none       &none       &none       &none       &none       &none
             >;
 
