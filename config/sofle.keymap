@@ -36,15 +36,15 @@
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |        |     F1    |    F2     |    F3     |    F4     |     F5    |                       |     F6    |     F7    |    F8     |    F9     |    F10    |    DEL    |
-// |        |           |           |           |           |   Next    |                       |    PGUP   |           |     ^     |           |           |    F11    |
-// |        |  CTRL A   |  CTRL S   |           |           |   Play    |                       |    HOME   |     <     |     V     |     >     |    END    |    F12    |
-// |        |    UNDO   |    CUT    |   COPY    |   PASTE   |   Prev    |                       |    PGDN   |           |           |           |   LC(/)   |           |
+// |        |           |           |           |           |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |    F11    |
+// |        |  CTRL A   |  CTRL S   |           |           |           |                       |    HOME   |     <     |     V     |     >     |    END    |    F12    |
+// |        |    UNDO   |    CUT    |   COPY    |   PASTE   |           |                       |    PGDN   |           |           |           |   LC(/)   |           |
 //                      |           |           |           |    DEL    |           ||          |           |           |           |           |                       
             bindings = <
 &kp GRAVE   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp DEL
-&trans      &none       &none       &none       &none       &kp C_PREV                          &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &kp F11
-&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_PP                            &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp F12
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_NEXT  &kp C_MUTE  &none       &kp PG_DN   &none       &none       &none       &kp LC(FSLH) &none
+&trans      &none       &none       &none       &none       &kp LC(T)                           &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &kp F11
+&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &none                               &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp F12
+&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &kp C_MUTE  &none       &kp PG_DN   &none       &none       &kp LC(FSLH) &none
                         &trans      &trans      &trans      &kp DEL     &none       &none       &none       &none       &none       &none
             >;
 
