@@ -18,42 +18,40 @@
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BKSPC |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | PIPE  |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BSLH  |
 // | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | NONE  |
 //               | GUI | ALT  | LOWER| BKSPC|  NONE  |  | NONE  |RAISE | SPACE | ENTER | NONE |
             bindings = <
 &kp ESC   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
-&kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                        &kp Y      &kp U     &kp I     &kp O    &kp P    &kp PIPE
+&kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                        &kp Y      &kp U     &kp I     &kp O    &kp P    &kp BSLH
 &kp LSHFT &kp A  &kp S    &kp D    &kp F     &kp G                        &kp H      &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &kp LCTRL &kp Z  &kp X    &kp C    &kp V     &kp B    &kp C_MUTE &kp C_PP &kp N      &kp M     &kp COMMA &kp DOT  &kp FSLH &none
-                 &kp LGUI &kp LALT &kp BSPC  &mo 1    &mo 3      &mo 1    &mo 2      &kp SPACE &kp RET   &none 
+                 &kp LGUI &kp LALT &mo 1     &kp BSPC &mo 3      &mo 1    &mo 2      &kp SPACE &kp RET   &none 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
         lower_layer {
-// TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |        |     F1    |    F2     |    F3     |    F4     |     F5    |                       |     F6    |     F7    |    F8     |    F9     |    F10    |    DEL    |
-// |        |           |           |           |           |           |                       |    PGUP   |           |     ^     |           |           |    F11    |
-// |        |  CTRL A   |  CTRL S   |           |           |   Next    |                       |    HOME   |     <     |     V     |     >     |    END    |    F12    |
-// |        |    UNDO   |    CUT    |   COPY    |   PASTE   |   Play    |                       |    PGDN   |           |           |           |           |           |
-//                      |           |           |           |   Prev    |           ||          |           |           |           |           |                       
+// |        |           |           |           |           |   Next    |                       |    PGUP   |           |     ^     |           |           |    F11    |
+// |        |  CTRL A   |  CTRL S   |           |           |   Play    |                       |    HOME   |     <     |     V     |     >     |    END    |    F12    |
+// |        |    UNDO   |    CUT    |   COPY    |   PASTE   |   Prev    |                       |    PGDN   |           |           |           |   LC(/)   |           |
+//                      |           |           |           |    DEL    |           ||          |           |           |           |           |                       
             bindings = <
 &kp GRAVE   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp DEL
 &trans      &none       &none       &none       &none       &kp C_PREV                          &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &kp F11
 &trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_PP                            &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp F12
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_NEXT  &kp C_MUTE  &none       &kp PG_DN   &none       &none       &none       &none       &none
-                        &trans      &trans      &trans      &none       &none       &none       &none       &none       &none       &none
+&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_NEXT  &kp C_MUTE  &none       &kp PG_DN   &none       &none       &none       &kp LC(FSLH) &none
+                        &trans      &trans      &trans      &kp DEL     &none       &none       &none       &none       &none       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
         raise_layer {
-// TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |     (     |     )     |           |           |           |
 // |        |           |           |           |           |           |                       |           |     [     |     ]     |     _     |     =     |           |
@@ -72,19 +70,17 @@
         };
 
         numpad_layer {
-// TODO: Some binds are waiting for shifted keycode support
-// Media keys on left hand?
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |           |     /     |     *     |     -     |   BKSPC   |
-// |        |           |           |           |           |           |                       |           |     7     |     8     |     9     |     +     |           |
-// |        |           |           |           |           |           |                       |           |     4     |     5     |     6     |           |           |
-// |        |           |           |           |           |           |           ||          |           |     1     |     2     |     3     |    RET    |           |
+// |        |           |           |           |           |   Next    |                       |           |     7     |     8     |     9     |     +     |           |
+// |        |           |           |           |           |   Play    |                       |           |     4     |     5     |     6     |           |           |
+// |        |           |           |           |           |   Prev    |           ||          |           |     1     |     2     |     3     |    RET    |           |
 //                      |           |           |           |           |           ||          |           |     0     |           |     .     |                       
             bindings = <
 &none       &none       &none       &none       &none       &none                               &none       &none       &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &kp BSPC
-&none       &none       &none       &none       &none       &none                               &none       &kp KP_N7   &kp KP_N8     &kp KP_N9       &none        &none
-&none       &none       &none       &none       &none       &none                               &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &kp KP_PLUS  &none
-&none       &none       &none       &none       &none       &none       &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &kp KP_ENTER &none
+&none       &none       &none       &none       &none       &kp C_PREV                          &none       &kp KP_N7   &kp KP_N8     &kp KP_N9       &none        &none
+&none       &none       &none       &none       &none       &kp C_PP                            &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &kp KP_PLUS  &none
+&none       &none       &none       &none       &none       &kp C_NEXT  &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &kp KP_ENTER &none
                         &none       &none       &none       &none       &none       &none       &none       &kp KP_N0   &none         &kp KP_DOT
             >;
 
@@ -92,7 +88,6 @@
         };
 
         none_layer {
-// TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
