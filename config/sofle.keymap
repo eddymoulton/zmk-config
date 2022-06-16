@@ -44,7 +44,7 @@
 &kp GRAVE   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp DEL
 &trans      &none       &none       &none       &none       &kp LC(T)                           &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &kp F11
 &trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &none                               &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp F12
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &kp C_MUTE  &none       &kp PG_DN   &none       &none       &kp LC(DOT) &none
+&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &kp C_MUTE  &none       &kp PG_DN   &none       &none       &kp LC(DOT) &none       &none
                         &trans      &trans      &trans      &none       &none       &none       &kp DEL     &none       &none       &none
             >;
 
