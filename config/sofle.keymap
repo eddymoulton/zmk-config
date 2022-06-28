@@ -39,13 +39,13 @@
 // |   o    |     ~     |    `      |           |           |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |    F11    |
 // |   o    |  CTRL A   |  CTRL S   |           |   LC(F)   |           |                       |    HOME   |     <     |     V     |     >     |    END    |    F12    |
 // |   o    |    UNDO   |    CUT    |   COPY    |   PASTE   |           |                       |    PGDN   |           |           |   LC(.)   |           |           |
-//                      |     o     |     o     |     o     |           |           ||          |    DEL    |           |           |           |                       
+//                      |     o     |     o     |           |           |           ||          |    DEL    |           |           |           |                       
             bindings = <
 &trans      &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &none
 &trans      &kp TILDE   &kp GRAVE   &none       &none       &kp LC(T)                           &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &kp F11
 &trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &none                               &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp F12
 &trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &kp C_MUTE  &none       &kp PG_DN   &none       &none       &kp LC(DOT) &none       &none
-                        &trans      &trans      &trans      &none       &none       &none       &kp DEL     &none       &none       &none
+                        &trans      &trans      &none      &none       &none       &none       &kp DEL     &none       &none       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -53,11 +53,11 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |        |           |           |           |           |           |                       |           |     (     |     )     |     _     |           |           |
-// |        |           |           |           |           |           |                       |           |     [     |     ]     |     +     |     -     |           |
-// |        |           |           |           |           |           |           ||          |           |     {     |     }     |     =     |           |           |
-//                      |           |           |           |           |           ||          |           |           |           |           |                       
+// |   o    |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |   o    |           |           |           |           |           |                       |           |     (     |     )     |     _     |           |           |
+// |   o    |           |           |           |           |           |                       |           |     [     |     ]     |     +     |     -     |           |
+// |   o    |           |           |           |           |           |           ||          |           |     {     |     }     |     =     |           |           |
+//                      |     o     |     o     |           |           |           ||          |           |           |           |           |                       
             bindings = <
 &trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
 &trans      &kp F1      &kp F4      &kp F7      &kp F10     &none                               &none       &kp LPAR    &kp RPAR    &kp UNDER   &none       &none
@@ -71,17 +71,17 @@
 
         numpad_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |        |           |           |           |           |           |                       |           |           |     /     |     *     |     -     |           |
-// |        |           |           |           |           |   Next    |                       |           |     7     |     8     |     9     |     +     |           |
-// |        |           |           |    DEL    |   BKSPC   |   Play    |                       |           |     4     |     5     |     6     |           |           |
-// |        |     .     |           |   SPACE   |   ENTER   |   Prev    |           ||          |           |     1     |     2     |     3     |    RET    |           |
-//                      |           |           |           |           |           ||          |           |     0     |           |     .     |                       
+// |   o    |           |           |           |           |           |                       |           |           |     /     |     *     |     -     |           |
+// |   o    |           |           |           |           |   Next    |                       |           |     7     |     8     |     9     |     +     |           |
+// |   o    |           |           |    DEL    |   BKSPC   |   Play    |                       |           |     4     |     5     |     6     |           |           |
+// |   o    |     .     |           |   SPACE   |   ENTER   |   Prev    |           ||          |           |     1     |     2     |     3     |    RET    |           |
+//                      |     o     |     o     |           |           |           ||          |           |     0     |           |     .     |                       
             bindings = <
-&none       &none       &none       &none       &none       &none                               &none       &none       &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &none
-&none       &none       &none       &none       &none       &kp C_PREV                          &none       &kp KP_N7   &kp KP_N8     &kp KP_N9       &none        &none
-&none       &none       &none       &kp DEL     &kp BSPC    &kp C_PP                            &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &kp KP_PLUS  &none
-&none       &kp DOT     &none       &kp SPACE   &kp RET     &kp C_NEXT  &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &kp KP_ENTER &none
-                        &none       &none       &none       &none       &none       &none       &none       &kp KP_N0   &none         &kp KP_DOT
+&trans      &none       &none       &none       &none       &none                               &none       &none       &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &none
+&trans      &none       &none       &none       &none       &kp C_PREV                          &none       &kp KP_N7   &kp KP_N8     &kp KP_N9       &none        &none
+&trans      &none       &none       &kp DEL     &kp BSPC    &kp C_PP                            &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &kp KP_PLUS  &none
+&trans      &kp DOT     &none       &kp SPACE   &kp RET     &kp C_NEXT  &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &kp KP_ENTER &none
+                        &trans      &trans      &none       &none       &none       &none       &none       &kp KP_N0   &none         &kp KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
