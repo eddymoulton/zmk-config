@@ -100,17 +100,17 @@
 
         numpad_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |   o    |           |           |           |           |           |                       |           |           |     /     |     *     |     -     |           |
-// |   o    |           |           |           |           |   Next    |                       |           |     7     |     8     |     9     |     +     |           |
+// |   o    |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |   o    |           |           |           |           |   Next    |                       |           |     7     |     8     |     9     |           |           |
 // |   o    |           |           |    DEL    |   BKSPC   |   Play    |                       |           |     4     |     5     |     6     |           |           |
-// |   o    |     .     |           |   SPACE   |   ENTER   |   Prev    |           ||          |           |     1     |     2     |     3     |    RET    |           |
+// |   o    |     .     |           |   SPACE   |   ENTER   |   Prev    |           ||          |           |     1     |     2     |     3     |           |           |
 //                      |     o     |     o     |           |           |           ||          |           |     0     |           |     .     |                       
             bindings = <
-&trans      &none       &none       &none       &none       &none                               &tog 5      &none       &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &kp KP_NUMLOCK
+&trans      &none       &none       &none       &none       &none                               &tog 5      &none       &none         &none           &none        &none        
 &trans      &none       &none       &none       &none       &kp C_PREV                          &none       &kp KP_N7   &kp KP_N8     &kp KP_N9       &none        &none
-&trans     &kp LC(FSLH) &none       &kp BSPC    &kp DEL     &kp C_PP                            &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &kp KP_PLUS  &none
-&trans      &kp DOT     &none       &kp SPACE   &kp RET     &kp C_NEXT  &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &kp KP_ENTER &none
-                        &trans      &trans      &none       &none       &none       &none       &none       &kp KP_N0   &kp KP_DOT    &none         
+&trans     &kp LC(FSLH) &none       &kp BSPC    &kp DEL     &kp C_PP                            &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &none        &none
+&trans      &kp DOT     &none       &kp SPACE   &kp RET     &kp C_NEXT  &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &none        &none
+                        &trans      &trans      &none       &none       &none       &none       &none       &kp KP_N0   &none         &none        
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
