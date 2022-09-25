@@ -28,16 +28,16 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BSLH  |
 // | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | ENTER |
+// |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | ESC |
 //               | GUI | ALT  | LOWER| RAISE| NUMPAD |  | LOWER |BKSPC | SPACE | ENTER | NONE |
             bindings = <
-&kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6     &kp N7       &kp N8      &kp N9      &kp N0      &none
+&none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y      &kp U        &kp I       &kp O       &kp P       &kp BSLH
 &kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H      &kp J        &kp K       &kp L       &kp SEMI    &kp SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &kp C_PP    &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH    &none
+&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &kp C_PP    &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
                         &kp LGUI    &kp LALT    &mo 1       &mo 2       &mo 4       &none       &kp BSPC   &kp SPACE    &kp RET     &none 
             >;
 
@@ -46,15 +46,15 @@
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |   o    |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |   o    |     ~     |    `      |           |           |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
-// |   o    |  CTRL A   |  CTRL S   |           |   LC(F)   |           |                       |    HOME   |     <     |     V     |     >     |    END    |           |
+// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |   o    |   SPACE   |   ENTER   |   BKSPC   |    DEL    |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
+// |   o    |  CTRL A   |  CTRL S   |    NUM    |   LC(F)   |           |                       |    HOME   |     <     |     V     |     >     |    END    |           |
 // |   o    |    UNDO   |    CUT    |   COPY    |   PASTE   |           |                       |    PGDN   |           |           |   LC(.)   |           |           |
 //                      |     o     |     o     |           |           |           ||          |    DEL    |           |           |           |                       
             bindings = <
-&trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &kp TILDE   &kp GRAVE   &none       &none       &kp LC(T)                           &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &none       
-&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &none                               &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &none       
+&none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
+&trans      &kp SAPCE   &kp RET     &kp BSPC    &kp DEL     &kp LC(T)                           &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &none       
+&trans      &kp LC(A)   &kp LC(S)   &mo 4       &kp LC(F)   &none                               &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &none       
 &trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &kp C_MUTE  &none       &kp PG_DN   &none       &none       &kp LC(DOT) &none       &none
                         &trans      &trans      &none       &none       &none       &none       &kp DEL   &kp LA(SPACE) &none       &none
             >;
@@ -64,16 +64,16 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |   o    |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |   o    |           |           |           |           |           |                       |           |     (     |     )     |     _     |           |           |
-// |   o    |           |           |           |           |           |                       |           |     [     |     ]     |     +     |     -     |           |
-// |   o    |           |           |           |           |           |           ||          |           |     {     |     }     |     =     |           |           |
+// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |   o    |           |           |           |           |   Next    |                       |     ~     |     (     |     )     |     _     |           |           |
+// |   o    |           |           |           |           |   Play    |                       |     `     |     [     |     ]     |     +     |     -     |           |
+// |   o    |           |           |           |           |   Prev    |           ||          |           |     {     |     }     |     =     |           |           |
 //                      |     o     |     o     |           |           |           ||          |           |           |           |           |                       
             bindings = <
-&trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &kp F1      &kp F4      &kp F7      &kp F10     &none                               &none       &kp LPAR    &kp RPAR    &kp UNDER   &none       &none
-&trans      &kp F2      &kp F5      &kp F8      &kp F11     &none                               &none       &kp LBKT    &kp RBKT    &kp PLUS    &kp MINUS   &none
-&trans      &kp F3      &kp F6      &kp F9      &kp F12     &none       &none       &none       &none       &kp LBRC    &kp RBRC    &kp EQUAL   &none       &none
+&none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
+&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV                          &kp TILDE   &kp LPAR    &kp RPAR    &kp UNDER   &none       &none
+&trans      &kp F2      &kp F5      &kp F8      &kp F11     &kp C_PP                            &kp GRAVE   &kp LBKT    &kp RBKT    &kp PLUS    &kp MINUS   &none
+&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT  &none       &none       &none       &kp LBRC    &kp RBRC    &kp EQUAL   &none       &none
                         &trans      &trans      &none       &none       &none       &none       &none       &mo 1       &none       &none
             >;
 
@@ -101,15 +101,15 @@
         numpad_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |   o    |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |   o    |           |           |           |           |   Next    |                       |           |     7     |     8     |     9     |           |           |
-// |   o    |           |           |    DEL    |   BKSPC   |   Play    |                       |           |     4     |     5     |     6     |           |           |
-// |   o    |     .     |           |   SPACE   |   ENTER   |   Prev    |           ||          |           |     1     |     2     |     3     |           |           |
+// |   o    |           |           |           |           |           |                       |           |     7     |     8     |     9     |           | TOG GAME  |
+// |   o    |           |           |           |           |           |                       |           |     4     |     5     |     6     |           |           |
+// |   o    |     .     |           |           |           |           |           ||          |           |     1     |     2     |     3     |           |           |
 //                      |     o     |     o     |           |           |           ||          |           |     0     |           |     .     |                       
             bindings = <
-&trans      &none       &none       &none       &none       &none                               &tog 5      &none       &none         &none           &none        &none        
-&trans      &none       &none       &none       &none       &kp C_PREV                          &none       &kp KP_N7   &kp KP_N8     &kp KP_N9       &none        &none
-&trans     &kp LC(FSLH) &none       &kp BSPC    &kp DEL     &kp C_PP                            &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &none        &none
-&trans      &kp DOT     &none       &kp SPACE   &kp RET     &kp C_NEXT  &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &none        &none
+&trans      &none       &none       &none       &none       &none                               &none       &none       &none         &none           &none        &none        
+&trans      &none       &none       &none       &none       &none                               &none       &kp KP_N7   &kp KP_N8     &kp KP_N9       &none        &tog 5
+&trans      &none       &none       &none       &none       &none                               &none       &kp KP_N4   &kp KP_N5     &kp KP_N6       &none        &none
+&trans      &none       &none       &none       &none       &none       &none       &none       &none       &kp KP_N1   &kp KP_N2     &kp KP_N3       &none        &none
                         &trans      &trans      &none       &none       &none       &none       &none       &kp KP_N0   &none         &none        
             >;
 
@@ -117,6 +117,24 @@
         };
 
         game_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
+// |        |           |           |           |           |           |           ||          |           |           |           |           |           |           |
+//                      |           |           |           |           |           ||          |           |           |           |           |                       
+            bindings = <
+&none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7       &kp N8      &kp N9      &kp N0      &tog 5
+&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U        &kp I       &kp O       &kp P       &kp BSLH
+&kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J        &kp K       &kp L       &kp SEMI    &kp SQT
+&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &kp C_PP    &kp N       &kp M        &kp COMMA   &kp DOT     &kp FSLH    &kp ESC 
+                        &kp LGUI    &kp LALT    &kp SPACE   &mo 2       &mo 4       &none       &kp BSPC    &kp SPACE    &kp RET     &none 
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+        };
+
+        old_game_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
@@ -142,7 +160,7 @@
 // |        |           |           |           |           |           |           ||          |           |           |           |           |           |           |
 //                      |           |           |           |           |           ||          |           |           |           |           |                       
             bindings = <
-&trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
+&none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
 &trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
 &trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
 &trans      &none       &none       &none       &none       &none       &none       &none       &none       &none       &none       &none       &none       &none
