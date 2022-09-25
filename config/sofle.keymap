@@ -47,13 +47,13 @@
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |   o    |   SPACE   |   ENTER   |   BKSPC   |    DEL    |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
+// |  ESC    |   SPACE   |   ENTER   |   BKSPC   |    DEL    |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
 // |   o    |  CTRL A   |  CTRL S   |    NUM    |   LC(F)   |           |                       |    HOME   |     <     |     V     |     >     |    END    |           |
 // |   o    |    UNDO   |    CUT    |   COPY    |   PASTE   |           |                       |    PGDN   |           |           |   LC(.)   |           |           |
 //                      |     o     |     o     |           |           |           ||          |    DEL    |           |           |           |                       
             bindings = <
 &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp LC(T)                           &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &none       
+&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp LC(T)                           &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &none       
 &trans      &kp LC(A)   &kp LC(S)   &mo 4       &kp LC(F)   &none                               &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &none       
 &trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &none       &kp C_MUTE  &none       &kp PG_DN   &none       &none       &kp LC(DOT) &none       &none
                         &trans      &trans      &none       &none       &none       &none       &kp DEL   &kp LA(SPACE) &none       &none
