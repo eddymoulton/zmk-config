@@ -1,0 +1,117 @@
+units:
+  kx: 18
+  ky: 18
+  px: 2
+  py: 2
+
+  promicro_x: 20
+  promicro_y: 40
+  sf: 14          # Switch footprint (square)
+
+points:
+  zones:
+    matrix:
+      key:
+        tags:
+          keys: true
+        padding: ky + py
+      anchor:
+        shift: [0, -ky] 
+      columns:
+        outer:
+        pinky:
+          spread: kx + px
+        ring:
+          stagger: 0.5ky
+          spread: kx + px
+        middle:
+          stagger: 0.2ky
+          spread: kx + px
+        index:
+          stagger: -0.2ky
+          spread: kx + px
+        inner:
+          stagger: -0.2ky
+          spread: kx + px        
+      rows:
+        bottom:
+        home:
+        top:
+    thumbrow:
+      key:
+        tags:
+          keys: true
+      anchor:
+        ref: matrix_ring_bottom
+        shift: [0, -ky - px]
+      columns:
+        tuck:
+        near:
+          stagger: 0.2ky
+          spread: kx + px
+        home:
+          stagger: -0.2ky
+          spread: kx + px
+        far:
+          stagger: -0.2ky
+          spread: kx + px
+          rotate: -15
+          origin: [-0.5kx, -0.5ky]
+      rows:
+        thumb:
+outlines:
+  exports:
+    _main_panel:
+      - type: polygon
+        points:
+          - ref: matrix_outer_top
+            shift: [-0.5 kx - px, 0.5 ky + py]
+          - ref: matrix_ring_top
+            shift: [-0 kx - px, 0.5 ky + 3py]
+          - ref: matrix_index_top
+            shift: [0 kx, 0.5 ky + 3py]
+          - ref: matrix_inner_top
+            shift: [promicro_x + 0.5 kx + 3px, 0.5 ky + 0.5py]
+          - ref: matrix_inner_bottom
+            shift: [promicro_x + 0.5 kx + 3px, 0.5 ky - 2py]
+          - ref: matrix_inner_bottom
+            shift: [promicro_x + 0.5 kx + 3px, -0.5 ky - py]
+          - ref: thumbrow_far_thumb
+            rotate: -15
+            shift: [0.5 kx + 6px, -0.5 ky - py]
+          - ref: thumbrow_home_thumb
+            shift: [-0.1 kx, -0.5 ky - py]
+          - ref: thumbrow_tuck_thumb
+            shift: [-0.5 kx - px, -0.5 ky - py]
+          - ref: matrix_outer_bottom
+            shift: [-0.5 kx - px, -0.5 ky - py]
+    raw:
+      - type: keys
+        side: left
+        size: [kx, ky]
+    _controller_area:
+      main:
+        type: rectangle
+        anchor:
+          ref: matrix_inner_top
+          shift: [0.5 promicro_x + px, -0.5 (promicro_y + ky + 4py)]
+        size: [promicro_x, promicro_y]
+        corner: 1
+    _key_outline:
+      - type: keys
+        side: left
+        size: ky
+        tags: [keys]
+    _usb_a:
+      - type: rectangle
+        size: [7.2, 14.5] 
+        anchor:
+          ref: thumbrow_far_thumb
+          shift: [0.5 kx + px, -0.5 ky]
+    _panel:
+      - _main_panel
+      - ^_controller_area
+      - ^_key_outline
+      - ^_usb_a
+    panel:
+      - name: _panel

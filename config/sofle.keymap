@@ -47,7 +47,7 @@
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |  ESC    |   SPACE   |   ENTER   |   BKSPC   |    DEL    |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
+// |  ESC   |   SPACE   |   ENTER   |   BKSPC   |    DEL    |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
 // |   o    |  CTRL A   |  CTRL S   |    NUM    |   LC(F)   |           |                       |    HOME   |     <     |     V     |     >     |    END    |           |
 // |   o    |    UNDO   |    CUT    |   COPY    |   PASTE   |           |                       |    PGDN   |           |           |   LC(.)   |           |           |
 //                      |     o     |     o     |           |           |           ||          |    DEL    |           |           |           |                       
