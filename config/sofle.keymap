@@ -31,7 +31,7 @@
 &none       &none       &none       &none       &none       &none                               &none      &none          &none       &none       &none       &none
 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y      &kp U          &kp I       &kp O       &kp P       &kp BSLH
 &kp LSHFT   &kp A       &kp S       &lt _NUM D  &kp F       &kp G                               &kp H      &kp J          &kp K       &kp L       &kp SEMI    &lt _NUM SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &kp C_PP    &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
+&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &tog 5      &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
                         &kp LGUI    &kp LALT    &mo _LOWER  &mo _RAISE  &mo _NUM    &none       &kp BSPC   &lt _SYM SPACE &kp RET     &none 
             >;
 
