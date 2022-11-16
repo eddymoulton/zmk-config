@@ -31,7 +31,7 @@
 &none       &none       &none       &none       &none       &none                               &none      &none          &none       &none       &none       &none
 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y      &kp U          &kp I       &kp O       &kp P       &kp BSLH
 &kp LSHFT   &kp A       &kp S       &lt _NUM D  &kp F       &kp G                               &kp H      &kp J          &kp K       &kp L       &kp SEMI    &lt _NUM SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &to _GAME   &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
+&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &tog _GAME  &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &kp ESC
                         &kp LGUI    &kp LALT    &mo _LOWER  &mo _RAISE  &mo _NUM    &none       &kp BSPC   &lt _SYM SPACE &kp RET     &none 
             >;
 
@@ -121,7 +121,7 @@
 &none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7       &kp N8      &kp N9      &kp N0      &tog 5
 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U        &kp I       &kp O       &kp P       &kp BSLH
 &kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J        &kp K       &kp L       &kp SEMI    &kp SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp ESC     &to _DEFAULT &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH    &kp ESC 
+&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp ESC     &tog _GAME  &kp N       &kp M        &kp COMMA   &kp DOT     &kp FSLH    &kp ESC 
                         &kp LGUI    &kp LALT    &lt _LOWER SPACE &mo 2  &mo 4       &none       &kp BSPC    &kp SPACE    &kp RET     &none 
             >;
 
