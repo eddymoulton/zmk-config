@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define _DEFAULT 0
-#define _LOWER 1
-#define _RAISE 2
-#define _SYM 3
-#define _NUM 4
-#define _GAME 5
+#define _GAME 1
+#define _LOWER 2
+#define _RAISE 3
+#define _SYM 4
+#define _NUM 5
 #define none_layer 15
 
 / {
