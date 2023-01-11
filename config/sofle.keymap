@@ -17,6 +17,10 @@
 #define _NUM 5
 #define none_layer 15
 
+&lt {
+    tapping-term-ms = <100>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
