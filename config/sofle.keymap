@@ -15,6 +15,7 @@
 #define _RAISE 3
 #define _SYM 4
 #define _NUM 5
+#define _SYS 6
 #define none_layer 15
 
 &lt {
@@ -109,8 +110,8 @@
 //                      |     o     |     o     |           |           |           ||          |           |           |           |           |                       
             bindings = <
 &trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PERCENT                         &kp CARET   &kp AMPS    &kp STAR    &none       &none       &none
+&trans      &none       &none       &none       &none       &none                               &none       &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &none
+&trans      &none       &none       &none       &none       &none                               &none       &kp PERCENT &kp CARET   &kp AMPS    &kp STAR    &none
 &trans      &none       &none       &none       &none       &none       &none       &none       &none       &none       &none       &none       &none       &none
                         &trans      &trans      &none       &none       &none       &none       &none       &none       &none       &none
             >;
