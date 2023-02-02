@@ -133,7 +133,7 @@
 &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
 &kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &kp UNDER   &kp EQUAL   &kp UP      &kp MINUS   &kp PLUS    &none       
 &trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp TILDE   &par        &bkt        &brc        &angle      &kp PG_DN   
+&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp GRAVE   &par        &bkt        &brc        &angle      &kp PG_DN   
                         &trans      &trans      &none       &none        &none      &none       &kp DEL     &lt _RAISE  &none       &none
             >;
 
