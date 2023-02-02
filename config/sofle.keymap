@@ -37,28 +37,28 @@
             label = "PAR";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp RPAR>;
-            mods = <MOD_LSHIFT>;
+            mods = <(MOD_LSHIFT)>;
         };
         bkt: brackets {
             compatible = "zmk,behavior-mod-morph";
             label = "BKT";
             #binding-cells = <0>;
             bindings = <&kp LBKT>, <&kp RBKT>;
-            mods = <MOD_LSHIFT>;
+            mods = <(MOD_LSHIFT)>;
         };
         brc: braces {
             compatible = "zmk,behavior-mod-morph";
             label = "BRC";
             #binding-cells = <0>;
             bindings = <&kp LBRC>, <&kp RBRC>;
-            mods = <MOD_LSHIFT>;
+            mods = <(MOD_LSHIFT)>;
         };
         angle: angle_brackets {
             compatible = "zmk,behavior-mod-morph";
             label = "ANGLE";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp GT>;
-            mods = <MOD_LSHIFT>;
+            mods = <(MOD_LSHIFT)>;
         };
     };
 
