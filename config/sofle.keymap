@@ -28,7 +28,40 @@
 // Might be worthwhile removing LA(SPACE) and just use those keys?
 
 
+// Investigate using mod morph to transform bksp<>del using alt?
+
 / {
+    behaviors {
+        par: parentheses {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PAR";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+            mods = <MOD_LSHIFT>;
+        };
+        bkt: brackets {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKT";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
+            mods = <MOD_LSHIFT>;
+        };
+        brc: braces {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRC";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+            mods = <MOD_LSHIFT>;
+        };
+        angle: angle_brackets {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ANGLE";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+            mods = <MOD_LSHIFT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -44,7 +77,7 @@
 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y      &kp U          &kp I       &kp O       &kp P       &kp BSLH
 &kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H      &kp J          &kp K       &kp L       &kp SEMI    &lt _NUM SQT
 &kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &tog _GAME  &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC
-                        &none       &kp LALT    &mo _LOWER  &mo _NUM    &none       &none       &mt LGUI BSPC &kp SPACE   &kp RET      &none 
+                        &none       &kp LALT    &mo _LOWER  &mo _NUM    &none       &none       &mt LGUI BSPC &kp SPACE   &kp RET     &none 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -68,6 +101,27 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
+//         _LOWER {
+// // ------------------------------------------------------------------------------------------------------------
+// // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
+// // |  ESC   |   SPACE   |   ENTER   |   BKSPC   |    DEL    |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
+// // |   o    |  CTRL A   |  CTRL S   |    NUM    |   LC(F)   |           |                       |    HOME   |     <     |     V     |     >     |    END    |           |
+// // |   o    |    UNDO   |    CUT    |   COPY    |   PASTE   |           |                       |    PGDN   |           |           |   LC(.)   |           |           |
+// //                      |     o     |     o     |           |           |           ||          |    DEL    |           |           |           |                       
+//             bindings = <
+// &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
+// &kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &kp PG_UP   &none       &kp UP      &none       &none       &none       
+// &trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &none       
+// &trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp PG_DN   &none       &none       &none       &none       &none
+//                         &trans      &trans      &none       &none        &none      &none       &kp DEL     &kp RET     &none       &none
+//             >;
+
+//             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+//         };
+
+
+
+
         _LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
@@ -77,9 +131,9 @@
 //                      |     o     |     o     |           |           |           ||          |    DEL    |           |           |           |                       
             bindings = <
 &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &kp PG_UP   &none       &kp UP      &none       &kp LC(P)   &none       
-&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &none       
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp PG_DN   &none       &none       &kp LC(DOT) &none       &none
+&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &kp UNDER   &kp EQUAL   &kp UP      &kp MINUS   &kp PLUS    &none       
+&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
+&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp TILDE   &par        &bkt        &brc        &angle      &kp PG_DN   
                         &trans      &trans      &none       &none        &none      &none       &kp DEL     &lt _RAISE  &none       &none
             >;
 
@@ -113,9 +167,9 @@
 //                      |     o     |     o     |           |           |           ||          |           |     0     |           |     .     |                       
             bindings = <
 &trans      &none       &none       &none       &none       &none                               &none       &none       &none         &none           &none        &none        
-&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV                          &none       &kp N7      &kp N8        &kp N9          &none        &none
-&trans      &kp F2      &kp F5      &kp F8      &kp F11     &kp C_PP                            &none       &kp N4      &kp N5        &kp N6          &kp DOT      &none
-&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT  &none       &none       &none       &kp N1      &kp N2        &kp N3          &none        &none
+&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV                          &kp PLUS    &kp N7      &kp N8        &kp N9          &kp MULTIPLY &none
+&trans      &kp F2      &kp F5      &kp F8      &kp F11     &kp C_PP                            &kp MINUS   &kp N4      &kp N5        &kp N6          &kp DOT      &none
+&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT  &none       &none       &none       &kp N1      &kp N2        &kp N3          &kp FSLH    &none
                         &none       &trans      &none       &none       &none       &none       &mt LGUI BSPC &kp N0    &trans       &none        
             >;
 
