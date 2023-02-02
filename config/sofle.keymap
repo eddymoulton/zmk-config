@@ -167,9 +167,9 @@
 //                      |     o     |     o     |           |           |           ||          |           |     0     |           |     .     |                       
             bindings = <
 &trans      &none       &none       &none       &none       &none                               &none       &none       &none         &none           &none        &none        
-&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV                          &kp PLUS    &kp N7      &kp N8        &kp N9          &kp MULTIPLY &none
+&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV                          &kp PLUS    &kp N7      &kp N8        &kp N9          &kp STAR     &none
 &trans      &kp F2      &kp F5      &kp F8      &kp F11     &kp C_PP                            &kp MINUS   &kp N4      &kp N5        &kp N6          &kp DOT      &none
-&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT  &none       &none       &none       &kp N1      &kp N2        &kp N3          &kp FSLH    &none
+&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT  &none       &none       &none       &kp N1      &kp N2        &kp N3          &kp FSLH     &none
                         &none       &trans      &none       &none       &none       &none       &mt LGUI BSPC &kp N0    &trans       &none        
             >;
 
