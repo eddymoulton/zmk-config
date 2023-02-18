@@ -31,44 +31,16 @@
 
 / {
     behaviors {
-        par: parentheses {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PAR";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
-            mods = <(MOD_LSFT)>;
-        };
-        bkt: brackets {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BKT";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
-            mods = <(MOD_LSFT)>;
-        };
-        brc: braces {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BRC";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp RBRC>;
-            mods = <(MOD_LSFT)>;
-        };
-        angle: angle_brackets {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ANGLE";
-            #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp GT>;
-            mods = <(MOD_LSFT)>;
-        };
         o_par_ang: open_parentheses_angle {
             compatible = "zmk,behavior-mod-morph";
-            label = "PAR";
+            label = "OPARANG";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp LT>;
             mods = <(MOD_LSFT)>;
         };
         c_par_ang: close_parentheses_angle {
             compatible = "zmk,behavior-mod-morph";
-            label = "PAR";
+            label = "CPARANG";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp GT>;
             mods = <(MOD_LSFT)>;
@@ -113,7 +85,6 @@
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
-
         _LOWER {
 // ------------------------------------------------------------------------------------------------------------
 // |        |           |           |           |           |           |                       |           |           |           |           |           |           |
