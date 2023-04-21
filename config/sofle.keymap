@@ -8,12 +8,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "../zmk-nodefree-config/helper.h"
 
 #define _DEFAULT 0
 #define _GAME 1
 #define _LOWER 2
 #define _NUM 3
 #define _SYS 4
+#define _HRM 5
 #define none_layer 15
 
 &lt {
@@ -61,7 +63,7 @@
 &none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &none      &none          &none       &none       &none       &none
 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y      &kp U          &kp I       &kp O       &kp P       &kp BSLH
 &kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H      &kp J          &kp K       &kp L       &kp SEMI    &lt _NUM SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &tog _GAME  &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC
+&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &tog _HRM   &tog _GAME  &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC
                         &none       &kp LALT    &mo _LOWER  &mo _NUM    &none       &none       &mt LGUI BSPC &kp SPACE   &kp RET     &none 
             >;
 
@@ -134,6 +136,24 @@
 &trans      &bt BT_SEL 0 &bt BT_SEL 1 &none     &none       &none                               &none       &none       &none       &none       &none       &none
 &trans      &out OUT_USB &out OUT_BLE &none     &none       &none       &none       &none       &none       &none       &none       &none       &none       &none
                         &none       &trans      &none       &none       &none       &none       &none       &none       &none       &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+        };
+
+        _HRM {
+// ------------------------------------------------------------------------------------------------------------
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BSLH  |
+// | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | ESC |
+//               | GUI | ALT  | LOWER| RAISE| NUMPAD |  | LOWER |BKSPC | SPACE | ENTER | NONE |
+            bindings = <
+&none       &kp N1          &kp N2          &kp N3          &kp N4              &kp N5                              &none      &none                &none           &none           &none               &none
+&kp TAB     &kp Q           &kp W           &kp E           &kp R               &kp T                               &kp Y      &kp U                &kp I           &kp O           &kp P               &kp BSLH
+&kp LSHFT   &hm_l LCTRL A   &hm_l LALT S    &hm_l LGUI D    &hm_shift_l LSHFT F &kp G                               &kp H      &hm_shift_r RSHFT N  &hm_r RGUI E    &hm_r RALT I    &hm_r RCTRL SEMI    &lt _NUM SQT
+&kp LCTRL   &kp Z           &kp X           &kp C           &kp V               &kp B       &tog _HRM   &tog _GAME  &kp N      &kp M                &kp COMMA       &kp DOT         &kp FSLH            &lt _SYS ESC
+                            &none           &kp LALT        &mo _LOWER          &mo _NUM    &none       &none       &mt LGUI BSPC &kp SPACE         &kp RET         &none 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
