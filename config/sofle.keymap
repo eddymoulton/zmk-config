@@ -152,7 +152,7 @@
             bindings = <
 &none       &kp N1          &kp N2          &kp N3          &kp N4              &kp N5                              &none      &none                &none           &none           &none               &none
 &kp TAB     &kp Q           &kp W           &kp E           &kp R               &kp T                               &kp Y      &kp U                &kp I           &kp O           &kp P               &kp BSLH
-&kp LSHFT   &hm_l LCTRL A   &hm_l LALT S    &hm_l LGUI D    &hm_shift_l LSHFT F &kp G                               &kp H      &hm_shift_r RSHFT N  &hm_r RGUI E    &hm_r RALT I    &hm_r RCTRL SEMI    &lt _NUM SQT
+&kp LSHFT   &hm_l LCTRL A   &hm_l LALT S    &hm_l LGUI D    &hm_shift_l LSHFT F &kp G                               &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K    &hm_r RALT L    &hm_r RCTRL SEMI    &lt _NUM SQT
 &kp LCTRL   &kp Z           &kp X           &kp C           &kp V               &kp B       &tog _HRM   &tog _GAME  &kp N      &kp M                &kp COMMA       &kp DOT         &kp FSLH            &lt _SYS ESC
                             &none           &kp LALT        &mo _LOWER          &mo _NUM    &none       &none       &mt LGUI BSPC &kp SPACE         &kp RET         &none 
             >;
