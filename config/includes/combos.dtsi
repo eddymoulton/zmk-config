@@ -1,4 +1,4 @@
-#include "../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
+// #include "../../zmk-nodefree-config/keypos_def/keypos_36keys.h"
 
 #define COMBO_TERM_FAST 35
 #define COMBO_TERM_SLOW 40
@@ -13,7 +13,7 @@
       global-quick-tap-ms = <COMBO_GLOBAL_QUICKTAP>;
 
       key-positions = <28 29>;
-      layers = <_HRM _HRM_LOWER _HRM_NUM>;
+      layers = <5 6 7>;
       bindings = <&kp LPAR>;
     };
 
@@ -22,7 +22,7 @@
       global-quick-tap-ms = <COMBO_GLOBAL_QUICKTAP>;
 
       key-positions = <32 34>;
-      layers = <_HRM _HRM_LOWER _HRM_NUM>;
+      layers = <5 6 7>;
       bindings = <&kp RPAR>;
     };
 
@@ -31,7 +31,7 @@
       global-quick-tap-ms = <COMBO_GLOBAL_QUICKTAP>;
 
       key-positions = <27 27>;
-      layers = <_HRM _HRM_LOWER _HRM_NUM>;
+      layers = <5 6 7>;
       bindings = <&kp LBKT>;
     };
 
@@ -40,7 +40,7 @@
       global-quick-tap-ms = <COMBO_GLOBAL_QUICKTAP>;
 
       key-positions = <33 34>;
-      layers = <_HRM _HRM_LOWER _HRM_NUM>;
+      layers = <5 6 7>;
       bindings = <&kp RBKT>;
     };
 
@@ -49,7 +49,7 @@
 //      global-quick-tap-ms = <COMBO_GLOBAL_QUICKTAP>;
 //
 //      key-positions = <LT2 LT1>;
-//      layers = <_HRM _HRM_LOWER _HRM_NUM>;
+//      layers = <5 6 7>;
 //      bindings = <&kp LBRC>;
 //    };
 //
