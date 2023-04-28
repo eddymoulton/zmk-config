@@ -182,7 +182,7 @@
 &kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &none       &kp EQUAL   &kp UP      &kp MINUS   &none       &none       
 &trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
 &trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp GRAVE   &kp LBKT    &kp RBKT    &none       &none       &kp PG_DN   
-                        &trans      &trans      &none       &none        &none      &none       &kp DEL     &o_par_ang  &kp RET     &none
+                        &trans      &trans      &none       &none        &none      &none       &kp DEL     &kp RET     &kp RSHIFT     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
