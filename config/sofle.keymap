@@ -13,14 +13,8 @@
 #include "includes/combos.dtsi"
 
 #define _DEFAULT 0
-#define _GAME 1
 #define _LOWER 2
-#define _NUM 3
-#define _SYS 4
-#define _HRM 5
-#define _HRM_LOWER 6
-#define _HRM_NUM 7
-#define _HRM_SYS 8
+#define _RAISE 3
 #define none_layer 15
 
 &lt {
@@ -28,45 +22,16 @@
 };
 
 / {
-    behaviors {
-        o_par_ang: open_parentheses_angle {
-            compatible = "zmk,behavior-mod-morph";
-            label = "OPARANG";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LT>;
-            mods = <(MOD_LSFT)>;
-        };
-        c_par_ang: close_parentheses_angle {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CPARANG";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp GT>;
-            mods = <(MOD_LSFT)>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         _DEFAULT {
             bindings = <
-&none       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &none      &none          &none       &none       &none       &none
-&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y      &kp U          &kp I       &kp O       &kp P       &kp BSLH
-&kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H      &kp J          &kp K       &kp L       &kp SEMI    &lt _NUM SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &tog _HRM   &tog _GAME  &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC
-                        &none       &kp LALT    &mo _LOWER  &mo _NUM    &none       &none       &mt LGUI BSPC &kp SPACE   &kp RET     &none 
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
-        };
-
-        _GAME {
-            bindings = <
 &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7       &kp N8      &kp N9      &kp N0      &tog 5
 &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U        &kp I       &kp O       &kp P       &kp BSLH
-&kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J        &kp K       &kp L       &kp SEMI    &lt _NUM SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &tog _GAME  &kp N       &kp M        &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC
-                        &none       &kp LALT    &kp SPACE   &mo _NUM    &none       &none       &mt LGUI BSPC &kp SPACE  &kp RET     &none 
+&kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J        &kp K       &kp L       &kp SEMI    &lt _RAISE SQT
+&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &tog _GAME  &kp N       &kp M        &kp COMMA   &kp DOT     &kp FSLH    &none
+                        &mo _LOWER  &kp LALT    &kp SPACE   &mo _RAISE  &none       &none       &mt LGUI BSPC &kp SPACE  &kp RET     &none 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -75,119 +40,21 @@
         _LOWER {
             bindings = <
 &none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &kp GRAVE   &kp EQUAL   &kp UP      &kp MINUS   &kp LC(P)   &none       
-&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp LBKT    &kp RBKT    &kp LPAR    &kp RPAR    &none       &kp PG_DN   
-                        &trans      &trans      &none       &none        &none      &none       &kp DEL     &kp SPACE   &kp RET     &none
+&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &none       &none       &none       &none       &none       &none
+&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &none       &none       &none       &none       &none       &none
+&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &none       &none       &none       &none       &none       &none
+                        &trans      &trans      &none       &none        &none      &none       &none       &none       &none       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
-        _NUM {
+        _RAISE {
             bindings = <
-&trans      &none       &none       &none       &none       &none                               &none       &none       &none         &none           &none        &none        
-&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV                          &kp PLUS    &kp N7      &kp N8        &kp N9          &kp STAR     &none
-&trans      &kp F2      &kp F5      &kp F8      &kp F11     &kp C_PP                            &kp MINUS   &kp N4      &kp N5        &kp N6          &kp DOT      &none
-&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT  &none       &none       &none       &kp N1      &kp N2        &kp N3          &kp FSLH     &none
-                        &none       &trans      &none       &none       &none       &none       &mt LGUI BSPC &kp N0    &trans        &none        
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
-        };
-
-        _SYS { 
-            bindings = <
-&none       &none        &none        &none        &none        &none                               &none       &none       &none       &none       &none       &none
-&trans      &bt BT_PRV   &bt BT_NXT   &none        &none        &bt BT_CLR                          &none       &none       &none       &none       &none       &none
-&trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                        &none       &none       &none       &none       &none       &none
-&trans      &out OUT_USB &out OUT_BLE &none        &none        &none       &none       &none       &none       &none       &none       &none       &none       &none
-                         &none        &trans       &none        &none       &none       &none       &none       &none       &none       &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
-        };
-
-        // Need to sort out:
-        // Tab
-        // Shift
-        // Backslash/pipe/quotes
-        // parentheses
-
-        // Ideas:
-        // Combos for brackets + punc?
-        // If I move enter to a layer, could combo all three thumb buttons for quick access
-        // Try out combos for layer switch
-        // Dedicated i3 resize buttons would be cool
-        // Dedicated 'shortcut' layer if I have a spare thumb?
-        //      Audio source controls
-
-        _HRM {
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BSLH  |
-// | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// |  CTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | ESC |
-//               | GUI | ALT  | LOWER| RAISE| NUMPAD |  | LOWER |BKSPC | SPACE | ENTER | NONE |
-            bindings = <
-&none       &none           &none           &none           &none               &none                               &none      &none                &none           &none           &none               &none
-&none       &kp Q           &kp W           &kp E           &kp R               &kp T                               &kp Y      &kp U                &kp I           &kp O           &kp P               &kp BSLH
-&none       &hm_l LCTRL A   &hm_l LALT S    &hm_l LGUI D    &hm_shift_l LSHFT F &kp G                               &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K    &hm_r RALT L    &hm_r RCTRL SEMI    &kp SQT
-&none       &kp Z           &kp X           &kp C           &kp V               &kp B       &tog _HRM   &tog _GAME  &kp N      &kp M                &kp COMMA       &kp DOT         &kp FSLH            &lt _HRM_SYS ESC
-                            &none           &kp LSHFT       &mo _HRM_LOWER      &mo _HRM_NUM &none      &none       &mt LGUI BSPC &kp SPACE         &kp RSHIFT      &none 
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
-        };
-
-        _HRM_LOWER {
-// ------------------------------------------------------------------------------------------------------------
-// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |  ESC   |   SPACE   |   ENTER   |   BKSPC   |    DEL    |   LC(T)   |                       |    PGUP   |           |     ^     |           |           |           |
-// |   o    |  CTRL A   |  CTRL S   |    NUM    |   LC(F)   |           |                       |    HOME   |     <     |     V     |     >     |    END    |           |
-// |   o    |    UNDO   |    CUT    |   COPY    |   PASTE   |           |                       |    PGDN   |           |           |   LC(.)   |           |           |
-//                      |     o     |     o     |           |           |           ||          |    DEL    |           |           |           |                       
-            bindings = <
-&none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP                        &none       &kp EQUAL   &kp UP      &kp MINUS   &none       &none       
-&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE                          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN &none      &none       &kp GRAVE   &kp LBKT    &kp RBKT    &none       &none       &kp PG_DN   
-                        &trans      &trans      &none       &none        &none      &none       &kp DEL     &kp RET     &kp RSHIFT     &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
-        };
-
-        _HRM_NUM {
-// ------------------------------------------------------------------------------------------------------------
-// |   o    |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |   o    |           |           |           |           |           |                       |           |     7     |     8     |     9     |           | TOG GAME  |
-// |   o    |           |           |           |           |           |                       |           |     4     |     5     |     6     |           |           |
-// |   o    |     .     |           |           |           |           |           ||          |           |     1     |     2     |     3     |           |           |
-//                      |     o     |     o     |           |           |           ||          |           |     0     |           |     .     |                       
-            bindings = <
-&trans      &none       &none       &none       &none       &none                               &none       &none       &none         &none           &none        &none        
-&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV                          &kp PLUS    &kp N7      &kp N8        &kp N9          &kp STAR     &none
-&trans      &kp F2      &kp F5      &kp F8      &kp F11     &kp C_PP                            &kp MINUS   &kp N4      &kp N5        &kp N6          &kp DOT      &none
-&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT  &none       &none       &none       &kp N1      &kp N2        &kp N3          &kp FSLH     &none
-                        &none       &trans      &none       &none       &none       &none       &mt LGUI BSPC &kp N0    &trans       &none        
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
-        };
-
-        _HRM_SYS {
-// ------------------------------------------------------------------------------------------------------------
-// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |        |           |           |           |           |           |                       |           |           |           |           |           |           |
-// |        |           |           |           |           |           |           ||          |           |           |           |           |           |           |
-//                      |           |           |           |           |           ||          |           |           |           |           |                       
-            bindings = <
-&none       &none       &none       &none       &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &bt BT_PRV  &bt BT_NXT  &none       &none       &bt BT_CLR                          &none       &none       &none       &none       &none       &none
-&trans      &bt BT_SEL 0 &bt BT_SEL 1 &none     &none       &none                               &none       &none       &none       &none       &none       &none
-&trans      &out OUT_USB &out OUT_BLE &none     &none       &none       &none       &none       &none       &none       &none       &none       &none       &none
+&trans      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &none       &none       &none       &none       &none       &none
+&trans      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0                              &none       &none       &none       &none       &none       &none
+&trans      &none       &none       &none       &none       &kp C_PP                            &none       &none       &none       &none       &none       &none
+&trans      &none       &none       &none       &none       &kp C_NEXT  &none       &none       &none       &none       &none       &none       &none       &none
                         &none       &trans      &none       &none       &none       &none       &none       &none       &none       &none
             >;
 
