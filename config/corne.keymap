@@ -52,7 +52,7 @@
             bindings = <
 &kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP        &kp GRAVE   &kp EQUAL   &kp UP      &kp MINUS   &kp LC(P)   &none       
 &trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN        &kp LBKT    &kp RBKT    &kp LPAR    &kp RPAR    &none       &kp PG_DN   
+&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN        &none       &kp LBKT    &kp RBKT    &kp LPAR    &kp RPAR    &kp PG_DN   
                                     &trans      &none       &none               &kp DEL     &kp SPACE   &kp RET
             >;
         };
