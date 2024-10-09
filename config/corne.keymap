@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define _DEFAULT 0
@@ -20,88 +20,97 @@
 #define none_layer 15
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        cmb_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 20 21>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         _DEFAULT {
             bindings = <
-&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y      &kp U          &kp I       &kp O       &kp P       &kp BSLH      
-&kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G               &kp H      &kp J          &kp K       &kp L       &kp SEMI    &lt _NUM SQT  
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC  
-                                    &kp LALT    &mo _LOWER  &mo _NUM            &mt LGUI BSPC &kp SPACE   &kp RET
+&kp TAB    &kp Q  &kp W  &kp E     &kp R       &kp T       &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H          &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
+                         &kp LALT  &mo _LOWER  &mo _NUM    &mt LGUI BSPC  &kp SPACE  &kp RET
             >;
         };
 
         _MAC {
             bindings = <
-&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y      &kp U          &kp I       &kp O       &kp P       &kp BSLH      
-&kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G               &kp H      &kp J          &kp K       &kp L       &kp SEMI    &lt _NUM SQT  
-&kp LGUI    &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N      &kp M          &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC  
-                                    &kp LALT    &mo _LOWER_MAC &mo _NUM         &mt LCTRL BSPC &kp SPACE   &kp RET
+&kp TAB    &kp Q  &kp W  &kp E     &kp R           &kp T       &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F           &kp G       &kp H           &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
+&kp LGUI   &kp Z  &kp X  &kp C     &kp V           &kp B       &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
+                         &kp LALT  &mo _LOWER_MAC  &mo _NUM    &mt LCTRL BSPC  &kp SPACE  &kp RET
             >;
         };
 
         _FANCY_GAME {
             bindings = <
-&kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U        &kp I       &kp O       &kp P       &kp BSLH
-&kp LSHFT   &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J        &kp K       &kp L       &kp SEMI    &lt _NUM SQT
-&kp LCTRL   &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M        &kp COMMA   &kp DOT     &kp FSLH    &lt _SYS ESC
-                                    &kp LALT    &kp SPACE   &mo _GAME_NUM       &mt LGUI BSPC &kp SPACE  &kp RET
+&kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T            &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F      &kp G            &kp H          &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V      &kp B            &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
+                         &kp LALT  &kp SPACE  &mo _GAME_NUM    &mt LGUI BSPC  &kp SPACE  &kp RET
             >;
         };
 
         _GAME_NUM {
             bindings = <
-&kp ESC     &kp N1      &kp N4      &kp N7      &kp N0      &kp C_PREV          &kp C_VOL_UP &none      &none       &none       &none       &none
-&trans      &kp N2      &kp N5      &kp N8      &kp DEL     &kp C_PP            &kp C_MUTE   &none      &none       &none       &none       &none
-&trans      &kp N3      &kp N6      &kp N9      &kp ESC     &kp C_NEXT          &kp C_VOL_DN &none      &none       &none       &none       &none
-                                    &trans      &none       &none               &none       &none       &none
+&kp ESC  &kp N1  &kp N4  &kp N7  &kp N0   &kp C_PREV    &kp C_VOL_UP  &none  &none  &none  &none  &none
+&trans   &kp N2  &kp N5  &kp N8  &kp DEL  &kp C_PP      &kp C_MUTE    &none  &none  &none  &none  &none
+&trans   &kp N3  &kp N6  &kp N9  &kp ESC  &kp C_NEXT    &kp C_VOL_DN  &none  &none  &none  &none  &none
+                         &trans  &none    &none         &none         &none  &none
             >;
         };
 
         _LOWER {
             bindings = <
-&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP        &kp GRAVE   &kp EQUAL   &kp UP      &kp MINUS   &kp LC(P)   &none       
-&trans      &kp LC(A)   &kp LC(S)   &none       &kp LC(F)   &kp C_MUTE          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
-&trans      &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)   &kp C_VOL_DN        &none       &kp LBKT    &kp RBKT    &kp LPAR    &kp RPAR    &kp PG_DN   
-                                    &trans      &none       &none               &kp DEL     &kp SPACE   &kp RET
+&kp ESC  &kp SPACE  &kp RET    &kp BSPC   &kp DEL    &kp C_VOL_UP    &kp GRAVE  &kp EQUAL  &kp UP    &kp MINUS  &kp LC(P)  &none
+&trans   &kp LC(A)  &kp LC(S)  &none      &kp LC(F)  &kp C_MUTE      &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp PG_UP
+&trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp C_VOL_DN    &none      &kp LBKT   &kp RBKT  &kp LPAR   &kp RPAR   &kp PG_DN
+                               &trans     &none      &none           &kp DEL    &kp SPACE  &kp RET
             >;
         };
 
         _LOWER_MAC {
             bindings = <
-&kp ESC     &kp SPACE   &kp RET     &kp BSPC    &kp DEL     &kp C_VOL_UP        &kp GRAVE   &kp EQUAL   &kp UP      &kp MINUS   &kp LG(P)   &none       
-&trans      &kp LG(A)   &kp LG(S)   &none       &kp LG(F)   &kp C_MUTE          &kp HOME    &kp LEFT    &kp DOWN    &kp RIGHT   &kp END     &kp PG_UP   
-&trans      &kp LG(Z)   &kp LG(X)   &kp LG(C)   &kp LG(V)   &kp C_VOL_DN        &none       &kp LBKT    &kp RBKT    &kp LPAR    &kp RPAR    &kp PG_DN   
-                                    &trans      &none       &none               &kp DEL     &kp SPACE   &kp RET
+&kp ESC  &kp SPACE  &kp RET    &kp BSPC   &kp DEL    &kp C_VOL_UP    &kp GRAVE  &kp EQUAL  &kp UP    &kp MINUS  &kp LG(P)  &none
+&trans   &kp LG(A)  &kp LG(S)  &none      &kp LG(F)  &kp C_MUTE      &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp PG_UP
+&trans   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp C_VOL_DN    &none      &kp LBKT   &kp RBKT  &kp LPAR   &kp RPAR   &kp PG_DN
+                               &trans     &none      &none           &kp DEL    &kp SPACE  &kp RET
             >;
         };
 
         _NUM {
             bindings = <
-&trans      &kp F1      &kp F4      &kp F7      &kp F10     &kp C_PREV          &kp PLUS    &kp N7      &kp N8        &kp N9          &kp STAR     &none    
-&trans      &kp F2      &kp F5      &kp F8      &kp F11     &kp C_PP            &kp MINUS   &kp N4      &kp N5        &kp N6          &kp DOT      &none    
-&trans      &kp F3      &kp F6      &kp F9      &kp F12     &kp C_NEXT          &none       &kp N1      &kp N2        &kp N3          &kp FSLH     &none    
-                                    &trans      &none       &none               &trans      &kp N0      &trans
+&trans  &kp F1  &kp F4  &kp F7  &kp F10  &kp C_PREV    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp STAR  &none
+&trans  &kp F2  &kp F5  &kp F8  &kp F11  &kp C_PP      &kp MINUS  &kp N4  &kp N5  &kp N6  &kp DOT   &none
+&trans  &kp F3  &kp F6  &kp F9  &kp F12  &kp C_NEXT    &none      &kp N1  &kp N2  &kp N3  &kp FSLH  &none
+                        &trans  &none    &none         &trans     &kp N0  &trans
             >;
         };
 
-        _SYS { 
+        _SYS {
             bindings = <
-&trans      &bt BT_PRV   &bt BT_NXT   &none        &none        &bt BT_CLR      &to _DEFAULT &none      &none       &none       &none       &none   
-&trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &to _FANCY_GAME &none   &none       &none       &none       &none
-&trans      &out OUT_USB &out OUT_BLE &none        &none        &none           &to _MAC    &none       &none       &none       &none       &none   
-                                      &trans       &none        &none           &none       &none       &none
+&trans  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR      &to _DEFAULT     &none  &none  &none  &none  &none
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to _FANCY_GAME  &none  &none  &none  &none  &none
+&trans  &out OUT_USB  &out OUT_BLE  &none         &none         &none           &to _MAC         &none  &none  &none  &none  &none
+                                    &trans        &none         &none           &none            &none  &none
             >;
         };
 
-        none_layer {                   
+        none_layer {
             bindings = <
-&trans      &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none   
-&trans      &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none   
-&trans      &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none   
-                                    &trans      &none       &none               &none       &none       &none
+&trans  &none  &none  &none   &none  &none    &none  &none  &none  &none  &none  &none
+&trans  &none  &none  &none   &none  &none    &none  &none  &none  &none  &none  &none
+&trans  &none  &none  &none   &none  &none    &none  &none  &none  &none  &none  &none
+                      &trans  &none  &none    &none  &none  &none
             >;
-        };  
+        };
     };
 };
