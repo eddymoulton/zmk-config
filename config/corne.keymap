@@ -11,13 +11,13 @@
 
 #define _DEFAULT 0
 #define _TESTING 1
-#define _MAC 4
-#define _FANCY_GAME 6
-#define _GAME_NUM 8
-#define _LOWER 10
-#define _LOWER_MAC 11
-#define _NUM 13
-#define _SYS 14
+#define _MAC 2
+#define _FANCY_GAME 3
+#define _GAME_NUM 4
+#define _LOWER 5
+#define _LOWER_MAC 6
+#define _NUM 7
+#define _SYS 8
 #define none_layer 15
 
 / {
