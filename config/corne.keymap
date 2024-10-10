@@ -10,13 +10,14 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define _DEFAULT 0
-#define _MAC 1
-#define _FANCY_GAME 2
-#define _GAME_NUM 3
-#define _LOWER 4
-#define _LOWER_MAC 5
-#define _NUM 6
-#define _SYS 7
+#define _TESTING 1
+#define _MAC 4
+#define _FANCY_GAME 6
+#define _GAME_NUM 8
+#define _LOWER 10
+#define _LOWER_MAC 11
+#define _NUM 13
+#define _SYS 14
 #define none_layer 15
 
 / {
@@ -38,6 +39,15 @@
 &kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H          &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
                          &kp LALT  &mo _LOWER  &mo _NUM    &mt LGUI BSPC  &kp SPACE  &kp RET
+            >;
+        };
+
+        _TESTING {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E     &kp R       &kp T       &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H          &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
+                         &kp LALT  &mo _LOWER  &mo _NUM    &mt LGUI BSPC  &kp SPACE  &none
             >;
         };
 
@@ -97,7 +107,7 @@
 
         _SYS {
             bindings = <
-&trans  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR      &to _DEFAULT     &none  &none  &none  &none  &none
+&trans  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR      &to _DEFAULT     &to _TESTING  &none  &none  &none  &none
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to _FANCY_GAME  &none  &none  &none  &none  &none
 &trans  &out OUT_USB  &out OUT_BLE  &none         &none         &none           &to _MAC         &none  &none  &none  &none  &none
                                     &trans        &none         &none           &none            &none  &none
