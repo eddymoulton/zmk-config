@@ -26,7 +26,22 @@
 
         cmb_enter {
             bindings = <&kp ENTER>;
-            key-positions = <19 20 21>;
+            key-positions = <20 21>;
+        };
+
+        cmb_tab {
+            bindings = <&kp TAB>;
+            key-positions = <14 15>;
+        };
+
+        cmb_bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 20>;
+        };
+
+        cmb_deleter {
+            bindings = <&kp DELETE>;
+            key-positions = <21 22>;
         };
     };
 
@@ -44,10 +59,10 @@
 
         _TESTING {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R       &kp T       &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H          &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
-                         &kp LALT  &mo _LOWER  &mo _NUM    &mt LGUI BSPC  &kp SPACE  &none
+&none      &kp Q  &kp W  &kp E     &kp R       &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
+                         &kp LALT  &mo _LOWER  &mo _NUM    &kp LGUI  &kp SPACE  &none
             >;
         };
 
@@ -108,9 +123,9 @@
         _SYS {
             bindings = <
 &trans  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR      &to _DEFAULT     &to _TESTING  &none  &none  &none  &none
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to _FANCY_GAME  &none  &none  &none  &none  &none
-&trans  &out OUT_USB  &out OUT_BLE  &none         &none         &none           &to _MAC         &none  &none  &none  &none  &none
-                                    &trans        &none         &none           &none            &none  &none
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to _FANCY_GAME  &none         &none  &none  &none  &none
+&trans  &out OUT_USB  &out OUT_BLE  &none         &none         &none           &to _MAC         &none         &none  &none  &none  &none
+                                    &trans        &none         &none           &none            &none         &none
             >;
         };
 
