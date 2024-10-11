@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define _DEFAULT 0
-#define _TESTING 1
+#define _BACKUP 1
 #define _MAC 2
 #define _FANCY_GAME 3
 #define _GAME_NUM 4
@@ -50,6 +50,15 @@
 
         _DEFAULT {
             bindings = <
+&none      &kp Q  &kp W  &kp E     &kp R       &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
+                         &kp LALT  &mo _LOWER  &mo _NUM    &kp LGUI  &kp SPACE  &none
+            >;
+        };
+
+        _BACKUP {
+            bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R       &kp T       &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BSLH
 &kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H          &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
 &kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
@@ -57,14 +66,6 @@
             >;
         };
 
-        _TESTING {
-            bindings = <
-&none      &kp Q  &kp W  &kp E     &kp R       &kp T       &kp Y     &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F       &kp G       &kp H     &kp J      &kp K      &kp L    &kp SEMI  &lt _NUM SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V       &kp B       &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &lt _SYS ESC
-                         &kp LALT  &mo _LOWER  &mo _NUM    &kp LGUI  &kp SPACE  &none
-            >;
-        };
 
         _MAC {
             bindings = <
