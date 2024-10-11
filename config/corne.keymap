@@ -27,21 +27,25 @@
         cmb_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
+            layers = <_DEFAULT _MAC _LOWER _LOWER_MAC _NUM>;
         };
 
         cmb_tab {
             bindings = <&kp TAB>;
             key-positions = <14 15>;
+            layers = <_DEFAULT _MAC _LOWER _LOWER_MAC _NUM>;
         };
 
         cmb_bksp {
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
+            layers = <_DEFAULT _MAC _LOWER _LOWER_MAC _NUM>;
         };
 
         cmb_deleter {
             bindings = <&kp DELETE>;
             key-positions = <21 22>;
+            layers = <_DEFAULT _MAC _LOWER _LOWER_MAC _NUM>;
         };
     };
 
