@@ -107,10 +107,10 @@
 
         _LOWER_MAC {
             bindings = <
-&kp ESC  &kp SPACE  &kp RET    &kp BSPC   &kp DEL    &kp C_VOL_UP    &kp GRAVE  &kp EQUAL  &kp UP    &kp MINUS  &kp LG(P)  &none
-&trans   &kp LG(A)  &kp LG(S)  &none      &kp LG(F)  &kp C_MUTE      &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp PG_UP
-&trans   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp C_VOL_DN    &none      &kp LBKT   &kp RBKT  &kp LPAR   &kp RPAR   &kp PG_DN
-                               &trans     &none      &none           &trans     &kp SPACE  &trans
+&kp ESC  &kp SPACE  &kp RET    &kp BSPC   &kp DEL    &kp C_VOL_UP    &kp GRAVE     &kp EQUAL  &kp UP    &kp MINUS  &kp LG(P)      &none
+&trans   &kp LG(A)  &kp LG(S)  &none      &kp LG(F)  &kp C_MUTE      &kp LG(LEFT)  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LG(RIGHT)  &kp PG_UP
+&trans   &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp C_VOL_DN    &none         &kp LBKT   &kp RBKT  &kp LPAR   &kp RPAR       &kp PG_DN
+                               &trans     &none      &none           &trans        &kp SPACE  &trans
             >;
         };
 
