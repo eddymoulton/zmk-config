@@ -256,7 +256,7 @@
 
         _SYS {
             bindings = <
-&trans  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR      &to 0  &to 1  &none  &none  &none  &none
+&trans  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR      &to 0  &to 1  &none  &none  &none  &kp CAPSLOCK
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &to 3  &to 9  &none  &none  &none  &none
 &trans  &out OUT_USB  &out OUT_BLE  &none         &none         &none           &to 2  &none  &none  &none  &none  &none
                                     &trans        &none         &none           &none  &none  &none
