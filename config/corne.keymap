@@ -27,7 +27,7 @@
         cmb_enter {
             bindings = <&kp ENTER>;
             key-positions = <20 21>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <100>;
         };
 
         cmb_tab {
@@ -41,7 +41,7 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
             layers = <0 2 1 3 4 7 9>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <100>;
         };
 
         cmb_delete {
