@@ -247,9 +247,9 @@
 
         altlower {
             bindings = <
-&none   &kp SPACE  &kp RET  &kp BSPC    &kp DEL  &kp C_VOL_UP    &none     &none      &none   &none      &none  &none
+&none   &kp SPACE  &kp RET  &kp BSPC    &kp DEL  &kp C_VOL_UP    &none     &none      &none   &kp MINUS  &none  &none
 &trans  &none      &none    &kp ESCAPE  &none    &kp C_MUTE      &kp LEFT  &kp DOWN   &kp UP  &kp RIGHT  &none  &kp PG_UP
-&trans  &none      &none    &none       &none    &kp C_VOL_DN    &none     &none      &none   &none      &none  &kp PG_DN
+&trans  &kp F20    &kp F21  &kp F22     &kp F23  &kp C_VOL_DN    &none     &none      &none   &none      &none  &kp PG_DN
                             &trans      &none    &none           &trans    &kp SPACE  &trans
             >;
         };
