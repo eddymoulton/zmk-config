@@ -121,13 +121,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        cmb_dash {
-            bindings = <&kp MINUS>;
-            key-positions = <9 22>;
-            layers = <11>;
-            require-prior-idle-ms = <125>;
-        };
-
         cmb_linestart {
             bindings = <&kp LG(LEFT)>;
             key-positions = <19 18>;
