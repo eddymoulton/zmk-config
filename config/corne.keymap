@@ -53,92 +53,92 @@
 
         cmb_lbkt {
             bindings = <&kp LBKT>;
-            key-positions = <3 4>;
-            layers = <9 11>;
+            key-positions = <2 3>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_rbkt {
             bindings = <&kp RBKT>;
-            key-positions = <4 5>;
-            layers = <9 11>;
+            key-positions = <3 4>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_lpar {
             bindings = <&kp LPAR>;
-            key-positions = <15 16>;
-            layers = <9 11>;
+            key-positions = <14 15>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_rpar {
             bindings = <&kp RPAR>;
-            key-positions = <16 17>;
-            layers = <9 11>;
+            key-positions = <15 16>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_lbrc {
             bindings = <&kp LBRC>;
-            key-positions = <27 28>;
-            layers = <9 11>;
+            key-positions = <26 27>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_rbrc {
             bindings = <&kp RBRC>;
-            key-positions = <28 29>;
-            layers = <9 11>;
+            key-positions = <27 28>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_lt {
             bindings = <&kp LT>;
             key-positions = <30 31>;
-            layers = <9 11>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_gt {
             bindings = <&kp GT>;
             key-positions = <31 32>;
-            layers = <9 11>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_grave {
             bindings = <&kp GRAVE>;
             key-positions = <7 8>;
-            layers = <9 11>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_equals {
             bindings = <&kp EQUAL>;
             key-positions = <9 8>;
-            layers = <9 11>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_dash {
             bindings = <&kp MINUS>;
             key-positions = <9 22>;
-            layers = <9 11>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_linestart {
             bindings = <&kp LG(LEFT)>;
             key-positions = <19 18>;
-            layers = <9 11>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_lineend {
             bindings = <&kp LG(RIGHT)>;
             key-positions = <22 21>;
-            layers = <9 11>;
+            layers = <11>;
             require-prior-idle-ms = <125>;
         };
     };
