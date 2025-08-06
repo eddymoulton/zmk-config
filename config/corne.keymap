@@ -33,7 +33,7 @@
         cmb_tab {
             bindings = <&kp TAB>;
             key-positions = <14 15>;
-            layers = <0 2 5 6 7 9 11>;
+            layers = <0 2 5 6 7 9>;
             require-prior-idle-ms = <125>;
         };
 
