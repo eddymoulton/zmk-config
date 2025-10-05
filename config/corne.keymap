@@ -122,14 +122,14 @@
         };
 
         cmb_linestart {
-            bindings = <&kp LG(LEFT)>;
+            bindings = <&kp HOME>;
             key-positions = <19 18>;
             layers = <1>;
             require-prior-idle-ms = <125>;
         };
 
         cmb_lineend {
-            bindings = <&kp LG(RIGHT)>;
+            bindings = <&kp END>;
             key-positions = <22 21>;
             layers = <1>;
             require-prior-idle-ms = <125>;
